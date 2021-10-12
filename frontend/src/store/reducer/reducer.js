@@ -17,7 +17,7 @@ const initialState = {
       case FETCH_MESSAGES_REQUEST:
         return {...state, fetchLoading: true};
       case FETCH_MESSAGES_SUCCESS:
-        return {...state, fetchLoading: false, products: action.payload};
+        return {...state, fetchLoading: false, messages: action.payload};
       case FETCH_MESSAGES_FAILURE:
         return {...state, fetchLoading: false};
       default:
