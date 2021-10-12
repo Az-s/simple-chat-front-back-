@@ -11,16 +11,16 @@ const router = express.Router();
 
 router.get('/', (req, res) => {
 
-  const date = req.query.dateTime;
+  const date = req.query.datetime;
   if (Object.keys(req.query).length !== 0) {
-      const date2 = new Date(req.query.dateTime);
+      const date2 = new Date(req.query.datetime);
 
-      if (isNaN(date2.getDate()) || req.query.dateTime === '') {
+      if (isNaN(date2.getDate()) || req.query.datetime === '') {
           res.status(400).send();
 
       } else {
           const arr = fileDb.getItems();
-          const arr2 = arr.filter(item => item.dateTime > date);
+          const arr2 = arr.filter(item => item.datetime > date);
           res.send(arr2);
       }
 
