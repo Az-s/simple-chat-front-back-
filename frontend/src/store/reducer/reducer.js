@@ -2,9 +2,6 @@ import {
     FETCH_MESSAGES_REQUEST,
     FETCH_MESSAGES_SUCCESS,
     FETCH_MESSAGES_FAILURE,
-    // CREATE_MESSAGE_REQUEST,
-    // CREATE_MESSAGE_SUCCESS,
-    // CREATE_MESSAGE_FAILURE,
 } from '../actions/actions';
 
 const initialState = {

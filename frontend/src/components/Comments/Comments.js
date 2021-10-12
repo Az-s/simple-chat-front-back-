@@ -20,7 +20,7 @@ const Comments = () => {
         <Grid container justifyContent='center' mt={3}>
             <Grid item>
                 <Paper>
-                    <List sx={{ width: '100%', maxWidth: 360, bgcolor: 'background.paper' }}>
+                    <List sx={{ width: '100%', minWidth: 500, bgcolor: 'background.paper'}}>
                         {messages.map(msg => (
                             <>
                                 <ListItem alignItems="flex-start">
