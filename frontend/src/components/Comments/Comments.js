@@ -23,7 +23,7 @@ const Comments = () => {
                     <List sx={{ width: '100%', minWidth: 500, bgcolor: 'background.paper'}}>
                         {messages.map(msg => (
                             <>
-                                <ListItem alignItems="flex-start">
+                                <ListItem alignItems="flex-start" key={msg.id}>
                                     <ListItemText
                                         primary={msg.datetime}
                                         secondary={
