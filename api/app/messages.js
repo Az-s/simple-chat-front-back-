@@ -16,7 +16,7 @@ router.post('/', (req, res) => {
     author: req.body.author,
     message: req.body.message,
     // id: req.body.id,
-    datetime: req.body.datetime,
+    // datetime: req.body.datetime,
   });
 
   res.send(newMessage);

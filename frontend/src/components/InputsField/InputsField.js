@@ -1,10 +1,8 @@
 import React, { useState } from 'react';
 import { Grid, Button } from '@mui/material';
 import { useDispatch } from "react-redux";
-import { nanoid } from 'nanoid';
 import {createMessage} from '../../store/actions/actions';
 import TextField from '@mui/material/TextField';
-import dayjs from 'dayjs';
 
 
 const InputsField = () => {
@@ -13,8 +11,6 @@ const InputsField = () => {
     const [text, setText] = useState({
         author: '',
         message: '',
-        id: nanoid(),
-        // datetime: dayjs().format('DD.MM.YYYY HH.mm')
     });
 
     const onInputChange = e => {

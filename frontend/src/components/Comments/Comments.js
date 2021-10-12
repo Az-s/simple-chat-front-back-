@@ -21,25 +21,29 @@ const Comments = () => {
             <Grid item>
                 <Paper>
                     <List sx={{ width: '100%', maxWidth: 360, bgcolor: 'background.paper' }}>
-                        <ListItem alignItems="flex-start">
-                            <ListItemText
-                                primary="Brunch this weekend?"
-                                secondary={
-                                    <React.Fragment>
-                                        <Typography
-                                            sx={{ display: 'inline' }}
-                                            component="span"
-                                            variant="body2"
-                                            color="text.primary"
-                                        >
-                                            Ali Connors
-                                        </Typography>
-                                        {" — I'll be in your neighborhood doing errands this…"}
-                                    </React.Fragment>
-                                }
-                            />
-                        </ListItem>
-                        <Divider variant="inset" component="li" />
+                        {messages.map(msg => (
+                            <>
+                                <ListItem alignItems="flex-start">
+                                    <ListItemText
+                                        primary={msg.datetime}
+                                        secondary={
+                                            <React.Fragment>
+                                                <Typography
+                                                    sx={{ display: 'inline' }}
+                                                    component="span"
+                                                    variant="body2"
+                                                    color="text.primary"
+                                                >
+                                                    {msg.author}
+                                                </Typography>
+                                                {` — ${msg.message}`}
+                                            </React.Fragment>
+                                        }
+                                    />
+                                </ListItem>
+                                <Divider variant="inset" component="li" />
+                            </>
+                        ))}
                     </List>
                 </Paper>
             </Grid>
