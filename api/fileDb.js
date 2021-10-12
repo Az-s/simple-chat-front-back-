@@ -15,7 +15,8 @@ module.exports = {
     }
   },
   getItems() {
-    return data;
+    // return data;
+    return data.slice(-30);
   },
   addItem(item) {
     item.id = nanoid();
