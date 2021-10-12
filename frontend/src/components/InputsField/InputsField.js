@@ -14,7 +14,7 @@ const InputsField = () => {
         author: '',
         message: '',
         id: nanoid(),
-        datetime: dayjs().format('DD.MM.YYYY HH.mm')
+        // datetime: dayjs().format('DD.MM.YYYY HH.mm')
     });
 
     const onInputChange = e => {
